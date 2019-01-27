@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint --fix src/*.{ts,tsx} src/**/*.{ts,tsx} src/**/**/*.{ts,tsx}",
+    "lint": "eslint --fix src/*.tsx src/**/*.{ts,tsx} src/**/**/*.tsx",
     "storybook": "start-storybook -p 6001 -c .storybook"
   },
   "devDependencies": {
