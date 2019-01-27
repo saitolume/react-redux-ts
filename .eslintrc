@@ -14,11 +14,14 @@
     "jsx": true
   },
   "rules": {
+    "no-undef": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-var-requires": "off",
     "prettier/prettier": [
       "error",
       {
