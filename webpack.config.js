@@ -32,5 +32,8 @@ module.exports = {
       template: path.resolve('./public/index.html'),
     }),
   ],
+  devServer: {
+    historyApiFallback: true,
+  },
   devtool: 'source-map',
 };
