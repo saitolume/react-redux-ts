@@ -1,6 +1,8 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 
+import { Button } from './atoms/Button';
+
 export const App: FC = () => {
   const [input, setInput] = useState<string>('world');
 
@@ -14,6 +16,7 @@ export const App: FC = () => {
         <h2>hello {input}</h2>
         <input type="text" value={input} onChange={updateMessage} />
       </LocalStateArea>
+      <Button>Click!</Button>
     </Wrapper>
   );
 };
