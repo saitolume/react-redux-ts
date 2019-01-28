@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { Home } from './pages/Home';
+import Home from '../containers/pages/HomeContainer';
 import { Contact } from './pages/Contact';
 import { Navbar } from './organisms/Navbar';
 
-export const App: FC = () => {
+const App: FC = () => {
   return (
     <BrowserRouter>
       <div>
@@ -21,3 +21,5 @@ export const App: FC = () => {
 const Header = styled(Navbar)`
   background-color: #222;
 `;
+
+export default App;
