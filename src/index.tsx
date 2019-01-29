@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { rootReducer } from './reducers';
 import App from './components/App';
+import countReducer from './ducks/count';
 
-const store = createStore(rootReducer);
+const rootReducer = combineReducers({
+  count: countReducer,
+});
 
 ReactDom.render(
-  <Provider store={store}>
+  <Provider store={createStore(rootReducer)}>
     <App />
   </Provider>,
   document.getElementById('root')

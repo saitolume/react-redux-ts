@@ -1,9 +1,8 @@
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import Home from '.';
-import { CountState, AppState } from '../../../types';
-import { countActions } from '../../../actions';
-import { CountAction } from '../../../actions/actionTypes';
+import { AppState, CountState } from '../../../types';
+import { countActions, CountAction } from '../../../ducks/count';
 
 export type StateProps = CountState;
 export type DispatchProps = typeof countActions;
