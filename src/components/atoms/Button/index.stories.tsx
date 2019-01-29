@@ -9,4 +9,7 @@ storiesOf('atoms/Button', module)
   })
   .add('color', () => {
     return <Button color="red">red</Button>;
+  })
+  .add('onClick', () => {
+    return <Button onClick={() => alert('alert!')}>click</Button>;
   });
