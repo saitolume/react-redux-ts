@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-boilerplate",
+  "name": "react-redux-ts",
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
