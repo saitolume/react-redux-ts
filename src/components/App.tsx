@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-
 import { Contact, Home } from './pages';
 import { Navbar } from './organisms';
 

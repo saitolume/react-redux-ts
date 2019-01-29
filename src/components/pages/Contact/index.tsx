@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-export const Contact: FC = () => {
+const Contact: FC = () => {
   return (
     <ContactList>
       <List>
@@ -28,3 +28,5 @@ const TwitterLink = styled.a`
   margin-left: 4px;
   text-decoration: none;
 `;
+
+export default Contact;

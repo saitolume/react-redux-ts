@@ -1,2 +1,2 @@
 export { default as Home } from './Home/container';
-export { Contact } from './Contact';
+export { default as Contact } from './Contact';
