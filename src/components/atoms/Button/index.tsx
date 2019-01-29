@@ -6,7 +6,7 @@ interface Props {
   onClick?: () => void;
 }
 
-export const Button: FC<Props> = props => (
+const Button: FC<Props> = props => (
   <StyledButton color={props.color} onClick={props.onClick}>
     {props.children}
   </StyledButton>
@@ -15,3 +15,5 @@ export const Button: FC<Props> = props => (
 const StyledButton = styled.button`
   background-color: ${props => props.color};
 `;
+
+export default Button;

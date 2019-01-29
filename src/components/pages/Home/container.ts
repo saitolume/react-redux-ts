@@ -1,6 +1,6 @@
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { Home } from '.';
+import Home from '.';
 import { CountState, AppState } from '../../../types';
 import { countActions } from '../../../actions';
 import { CountAction } from '../../../actions/actionTypes';

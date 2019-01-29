@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StateProps, DispatchProps } from './container';
 import { Button } from '../../atoms';
 
-export const Home: FC<StateProps & DispatchProps> = props => {
+const Home: FC<StateProps & DispatchProps> = props => {
   const [message, setMessage] = useState<string>('hello world');
   const [imputNumber, setInputNumber] = useState<number>(0);
 
@@ -49,3 +49,5 @@ const Count = styled.span`
 const CountForm = styled.div`
   margin-top: 10px;
 `;
+
+export default Home;

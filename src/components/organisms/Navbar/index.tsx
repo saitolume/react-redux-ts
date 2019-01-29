@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Navbar: FC = () => {
+const Navbar: FC = () => {
   return (
     <Wrapper>
       <List>
@@ -24,3 +24,5 @@ const Wrapper = styled.ul`
 const List = styled.li`
   margin-right: 10px;
 `;
+
+export default Navbar;
