@@ -3,22 +3,25 @@ import styled from 'styled-components';
 
 export const Contact: FC = () => {
   return (
-    <div>
-      <LinkList>
-        <li>
-          Twitter:
-          <TwitterLink href="https://twitter.com/saitoeku3" target="_blank">
-            @saitoeku3
-          </TwitterLink>
-        </li>
-        <li>Email: saitoeku3@gmail.com</li>
-      </LinkList>
-    </div>
+    <ContactList>
+      <List>
+        Twitter:
+        <TwitterLink href="https://twitter.com/saitoeku3" target="_blank">
+          @saitoeku3
+        </TwitterLink>
+      </List>
+      <List>Email: saitoeku3@gmail.com</List>
+    </ContactList>
   );
 };
 
-const LinkList = styled.ul`
+const ContactList = styled.ul`
+  margin-top: 30px;
   list-style-type: square;
+`;
+
+const List = styled.li`
+  margin-bottom: 10px;
 `;
 
 const TwitterLink = styled.a`
