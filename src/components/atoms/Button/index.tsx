@@ -3,12 +3,15 @@ import styled from 'styled-components';
 
 interface Props {
   color?: string;
+  onClick?: () => void;
 }
 
-export const Button: FC<Props> = props => {
-  return <Btn color={props.color}>{props.children}</Btn>;
-};
+export const Button: FC<Props> = props => (
+  <StyledButton color={props.color} onClick={props.onClick}>
+    {props.children}
+  </StyledButton>
+);
 
-const Btn = styled.button`
+const StyledButton = styled.button`
   background-color: ${props => props.color};
 `;

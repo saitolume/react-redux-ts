@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { AppState } from '../types';
-import { countReducer } from './counter';
+import { countReducer } from './count';
 
 export const initialState: AppState = {
   count: {
