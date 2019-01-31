@@ -14,6 +14,7 @@ const Contact: FC = () => {
     </ContactList>
   );
 };
+export default Contact;
 
 const ContactList = styled.ul`
   margin-top: 30px;
@@ -28,5 +29,3 @@ const TwitterLink = styled.a`
   margin-left: 4px;
   text-decoration: none;
 `;
-
-export default Contact;

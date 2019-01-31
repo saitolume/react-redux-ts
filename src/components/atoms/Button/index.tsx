@@ -11,9 +11,8 @@ const Button: FC<Props> = props => (
     {props.children}
   </StyledButton>
 );
+export default Button;
 
 const StyledButton = styled.button`
   background-color: ${props => props.color};
 `;
-
-export default Button;

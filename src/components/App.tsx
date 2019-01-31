@@ -1,18 +1,19 @@
 import React, { FC } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Contact, Home } from './pages';
-import { Navbar } from './organisms';
+import { Header } from './organisms';
 
 const App: FC = () => {
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
-        <Route path="/" exact component={Home} />
-        <Route path="/contact" component={Contact} />
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
       </div>
     </BrowserRouter>
   );
 };
-
 export default App;

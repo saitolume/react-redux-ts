@@ -33,6 +33,7 @@ const Home: FC<StateProps & DispatchProps> = props => {
     </Wrapper>
   );
 };
+export default Home;
 
 const Wrapper = styled.div`
   margin: 30px;
@@ -49,5 +50,3 @@ const Count = styled.span`
 const CountForm = styled.div`
   margin-top: 10px;
 `;
-
-export default Home;
