@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Navbar: FC = () => {
+const Header: FC = () => {
   return (
     <Wrapper>
       <List>
@@ -14,15 +14,16 @@ const Navbar: FC = () => {
     </Wrapper>
   );
 };
+export default Header;
 
 const Wrapper = styled.ul`
   display: flex;
+  margin: 0px;
   list-style-type: none;
+  padding: 16px 0px;
   padding-left: 30px;
 `;
 
 const List = styled.li`
   margin-right: 10px;
 `;
-
-export default Navbar;

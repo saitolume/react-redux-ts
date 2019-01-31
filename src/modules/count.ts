@@ -40,18 +40,18 @@ const countReducer: Reducer<CountState, CountAction> = (
       return state;
   }
 };
-
 export default countReducer;
 
 // action creator
 export const increment = (): CountAction => ({
   type: ActionType.INCREMENT,
 });
+
 export const decrement = (): CountAction => ({
   type: ActionType.DECREMENT,
 });
+
 export const setCount = (payload: number): CountAction => ({
   type: ActionType.SET_COUNT,
   payload,
 });
-export const countActions = { increment, decrement, setCount };

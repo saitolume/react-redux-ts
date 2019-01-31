@@ -1,4 +1,4 @@
-module.exports = (baseConfig, env, config) => {
+module.exports = (baseConfig: any, env: any, config: any) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     use: [
