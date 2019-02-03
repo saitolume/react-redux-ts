@@ -1,8 +1,9 @@
-import { combineReducers, createStore } from 'redux';
-import countReducer from './modules/count';
+import { applyMiddleware, createStore } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import rootReducer from './modules';
+import rootSaga from './sagas';
 
-const rootReducer = combineReducers({
-  count: countReducer,
-});
+const sagaMiddleware = createSagaMiddleware();
+export const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
-export const store = createStore(rootReducer);
+sagaMiddleware.run(rootSaga);

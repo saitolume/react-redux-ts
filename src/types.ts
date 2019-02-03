@@ -5,8 +5,15 @@ export type AppAction<T extends string, Extra extends {} = {}> = Action<T> &
 
 export interface AppState {
   count: CountState;
+  qiita: QiitaState;
 }
 
 export interface CountState {
   value: number;
+}
+
+export interface QiitaState {
+  id: string;
+  name: string;
+  description: string;
 }

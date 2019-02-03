@@ -6,6 +6,7 @@ import { Button } from '../../atoms';
 const Home: FC<StateProps & DispatchProps> = props => {
   const [message, setMessage] = useState<string>('hello world');
   const [imputNumber, setInputNumber] = useState<number>(0);
+  const [id, setId] = useState<string>('');
 
   return (
     <Wrapper>
@@ -21,14 +22,31 @@ const Home: FC<StateProps & DispatchProps> = props => {
         <Count>count: {props.value}</Count>
         <Button onClick={props.increment}>+</Button>
         <Button onClick={props.decrement}>-</Button>
-        <CountForm>
+        <Form>
           <input
             type="number"
             value={imputNumber}
             onChange={e => setInputNumber(e.target.valueAsNumber)}
           />
           <Button onClick={() => props.setCount(imputNumber)}>set</Button>
-        </CountForm>
+        </Form>
+      </ContentArea>
+      <ContentArea>
+        <p>Qiita</p>
+        <QiitaProfile>
+          <li>id: {props.id}</li>
+          <li>name: {props.name}</li>
+          <li>description: {props.description}</li>
+        </QiitaProfile>
+        <Form>
+          <input
+            type="text"
+            value={id}
+            onChange={e => setId(e.target.value)}
+            placeholder="Input Qiita UserID"
+          />
+          <Button onClick={() => props.fetchUser(id)}>fetch</Button>
+        </Form>
       </ContentArea>
     </Wrapper>
   );
@@ -47,6 +65,11 @@ const Count = styled.span`
   margin-right: 10px;
 `;
 
-const CountForm = styled.div`
+const QiitaProfile = styled.ul`
+  list-style-type: none;
+  padding-left: 0;
+`;
+
+const Form = styled.div`
   margin-top: 10px;
 `;
