@@ -32,7 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve('./public/index.html'),
     }),
-    new webpack.EnvironmentPlugin(['OPEN_WEATHER_MAP_KEY']),
+    new webpack.EnvironmentPlugin(['QIITA_TOKEN']),
   ],
   devServer: {
     historyApiFallback: true,
