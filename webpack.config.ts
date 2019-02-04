@@ -1,6 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -31,6 +31,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('./public/index.html'),
+      favicon: path.resolve('./public/favicon.ico'),
     }),
     new webpack.EnvironmentPlugin(['QIITA_TOKEN']),
   ],
