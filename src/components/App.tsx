@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Contact, Home } from './pages';
+import { Home, Demo } from './pages';
 import { Header } from './organisms';
 
 const App: FC = () => {
@@ -9,8 +9,8 @@ const App: FC = () => {
       <div>
         <Header />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/" component={Home} />
+          <Route path="/demo" exact component={Demo} />
         </Switch>
       </div>
     </BrowserRouter>
