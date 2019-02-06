@@ -1,31 +1,33 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import ReactLogo from '../../../../assets/logo.svg';
 
-const Contact: FC = () => {
+const Home: FC = () => {
   return (
-    <ContactList>
-      <List>
-        Twitter:
-        <TwitterLink href="https://twitter.com/saitoeku3" target="_blank">
-          @saitoeku3
-        </TwitterLink>
-      </List>
-      <List>Email: saitoeku3@gmail.com</List>
-    </ContactList>
+    <div>
+      <Logo src={ReactLogo} alt="react logo" />
+      <Title>saitoeku3's React Boilerplate</Title>
+    </div>
   );
 };
-export default Contact;
+export default Home;
 
-const ContactList = styled.ul`
-  margin-top: 30px;
-  list-style-type: square;
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 `;
 
-const List = styled.li`
-  margin-bottom: 10px;
+const Logo = styled.img`
+  padding: 4vh 0;
+  height: 32vh;
+  animation: ${rotate} infinite 20s linear;
 `;
 
-const TwitterLink = styled.a`
-  margin-left: 4px;
-  text-decoration: none;
+const Title = styled.h1`
+  color: white;
+  margin: 0;
 `;

@@ -1,9 +1,8 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import { StateProps, DispatchProps } from './container';
-import { Button } from '../../atoms';
 
-const Home: FC<StateProps & DispatchProps> = props => {
+const Demo: FC<StateProps & DispatchProps> = props => {
   const [message, setMessage] = useState<string>('hello world');
   const [imputNumber, setInputNumber] = useState<number>(0);
   const [id, setId] = useState<string>('');
@@ -20,15 +19,15 @@ const Home: FC<StateProps & DispatchProps> = props => {
       </ContentArea>
       <ContentArea>
         <Count>count: {props.value}</Count>
-        <Button onClick={props.increment}>+</Button>
-        <Button onClick={props.decrement}>-</Button>
+        <button onClick={props.increment}>+</button>
+        <button onClick={props.decrement}>-</button>
         <Form>
           <input
             type="number"
             value={imputNumber}
             onChange={e => setInputNumber(e.target.valueAsNumber)}
           />
-          <Button onClick={() => props.setCount(imputNumber)}>set</Button>
+          <button onClick={() => props.setCount(imputNumber)}>set</button>
         </Form>
       </ContentArea>
       <ContentArea>
@@ -45,13 +44,13 @@ const Home: FC<StateProps & DispatchProps> = props => {
             onChange={e => setId(e.target.value)}
             placeholder="Input Qiita UserID"
           />
-          <Button onClick={() => props.fetchUser(id)}>fetch</Button>
+          <button onClick={() => props.fetchUser(id)}>fetch</button>
         </Form>
       </ContentArea>
     </Wrapper>
   );
 };
-export default Home;
+export default Demo;
 
 const Wrapper = styled.div`
   margin: 30px;
