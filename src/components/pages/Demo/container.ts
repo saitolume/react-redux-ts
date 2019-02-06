@@ -1,6 +1,6 @@
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import Home from '.';
+import Demo from '.';
 import { AppState, CountState, QiitaState } from '../../../types';
 import {
   CountAction,
@@ -33,4 +33,4 @@ const mapDispatchToProps = (dispatch: Dispatch<CountAction>): DispatchProps =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(Demo);

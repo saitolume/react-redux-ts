@@ -1,5 +1,5 @@
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -23,6 +23,17 @@ module.exports = {
         test: /\.html$/,
         use: 'html-loader',
       },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[hash].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
@@ -30,8 +41,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./public/index.html'),
-      favicon: path.resolve('./public/favicon.ico'),
+      template: path.resolve('./src/index.html'),
+      favicon: path.resolve('./assets/favicon.ico'),
     }),
     new webpack.EnvironmentPlugin(['QIITA_TOKEN']),
   ],
