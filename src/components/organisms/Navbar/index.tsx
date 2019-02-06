@@ -38,6 +38,9 @@ const LinkList = styled.ul`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.color};
+  &:hover {
+    color: #61dafb;
+  }
 `;
 
 const Separation = styled.span`

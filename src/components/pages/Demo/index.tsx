@@ -3,21 +3,12 @@ import styled from 'styled-components';
 import { StateProps, DispatchProps } from './container';
 
 const Demo: FC<StateProps & DispatchProps> = props => {
-  const [message, setMessage] = useState<string>('hello world');
   const [imputNumber, setInputNumber] = useState<number>(0);
   const [id, setId] = useState<string>('');
 
   return (
     <Wrapper>
-      <ContentArea>
-        <p>{message}</p>
-        <input
-          type="text"
-          value={message}
-          onChange={e => setMessage(e.target.value)}
-        />
-      </ContentArea>
-      <ContentArea>
+      <Content>
         <Count>count: {props.value}</Count>
         <button onClick={props.increment}>+</button>
         <button onClick={props.decrement}>-</button>
@@ -29,8 +20,8 @@ const Demo: FC<StateProps & DispatchProps> = props => {
           />
           <button onClick={() => props.setCount(imputNumber)}>set</button>
         </Form>
-      </ContentArea>
-      <ContentArea>
+      </Content>
+      <Content>
         <p>Qiita</p>
         <QiitaProfile>
           <li>id: {props.id}</li>
@@ -46,17 +37,21 @@ const Demo: FC<StateProps & DispatchProps> = props => {
           />
           <button onClick={() => props.fetchUser(id)}>fetch</button>
         </Form>
-      </ContentArea>
+      </Content>
     </Wrapper>
   );
 };
 export default Demo;
 
 const Wrapper = styled.div`
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  color: #fff;
 `;
 
-const ContentArea = styled.div`
+const Content = styled.div`
   margin: 30px 0px;
 `;
 

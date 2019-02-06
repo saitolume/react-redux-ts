@@ -23,13 +23,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  height: 64vh;
+  height: 80vh;
   width: 100vw;
   background-color: #222;
 `;
 
 const Header = styled(Navbar)`
-  margin-top: 4vh;
+  margin: 4vh 0 2vh 0;
   z-index: 1;
 `;

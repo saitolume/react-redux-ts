@@ -4,13 +4,17 @@ import ReactLogo from '../../../../assets/logo.svg';
 
 const Home: FC = () => {
   return (
-    <div>
+    <Wrapper>
       <Logo src={ReactLogo} alt="react logo" />
       <Title>saitoeku3's React Boilerplate</Title>
-    </div>
+    </Wrapper>
   );
 };
 export default Home;
+
+const Wrapper = styled.div`
+  text-align: center;
+`;
 
 const rotate = keyframes`
   from {
@@ -27,7 +31,8 @@ const Logo = styled.img`
   animation: ${rotate} infinite 20s linear;
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
   color: white;
+  font-size: 4vh;
   margin: 0;
 `;
