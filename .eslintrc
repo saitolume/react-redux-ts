@@ -8,7 +8,7 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
   "parser": "@typescript-eslint/typescript-estree",
   "parserOptions": {
     "jsx": true
@@ -20,6 +20,7 @@
     "react/jsx-uses-vars": "error",
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-explicit-any": "off",
